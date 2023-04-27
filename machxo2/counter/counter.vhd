@@ -6,7 +6,7 @@ use ieee.numeric_std.all;
 entity counter is
 
 	port (
-		rst  : inout  std_logic;
+		rst  : in  std_logic;
 		leds : out std_logic_vector(7 downto 0)
 	);
 
