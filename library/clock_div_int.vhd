@@ -16,7 +16,7 @@ entity clock_div_int is
 
 end entity;
 
-architecture rtl of clock_div_int is
+architecture clock_div_int_arch of clock_div_int is
 
 	signal acc   : integer range 0 to divider;
 	signal state : std_logic;

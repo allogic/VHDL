@@ -16,7 +16,7 @@ entity clock_div_pow2 is
 
 end entity;
 
-architecture rtl of clock_div_pow2 is
+architecture clock_div_pow2_arch of clock_div_pow2 is
 
 	signal acc : std_logic_vector(3 downto 0);
 

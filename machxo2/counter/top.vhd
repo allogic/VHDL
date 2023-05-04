@@ -6,13 +6,13 @@ use ieee.numeric_std.all;
 entity counter is
 
 	port (
-		rst  : in  std_logic;
+		mrst  : in  std_logic;
 		leds : out std_logic_vector(7 downto 0)
 	);
 
 end entity;
 
-architecture rtl of counter is
+architecture counter_arch of counter is
 
 	component osch is
 
@@ -60,7 +60,7 @@ begin
 			divider => 208000
 		)
 		port map (
-			rst => rst,
+			rst => mrst,
 			osc => osc,
 			clk => clk
 		);
@@ -72,7 +72,7 @@ begin
 			acc <= std_logic_vector(unsigned(acc) + 1);
 		end if;
 
-		if (rst = '1') then
+		if (mrst = '1') then
 			acc <= (others => '0');
 		end if;
 
